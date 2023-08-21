@@ -13,6 +13,7 @@ const Login = () => {
    const {email,password} = event.target ;
    console.log('email:',email.value,
                'password:',password.value);
+               //connexion 
                signInWithEmailAndPassword(auth,email.value, password.value)
                .then(userCredential => {
                 console.log("userCredential",userCredential)
@@ -43,9 +44,10 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="text" name='password' placeholder="password" className="input input-bordered" />
+          <input type="password" name='password' placeholder="password" className="input input-bordered" />
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+            <a href="/register" className="label-text-alt link link-hover">Register</a>
           </label>
         </div>
         <div className="form-control mt-6">

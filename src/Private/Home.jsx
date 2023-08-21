@@ -7,9 +7,9 @@ const Home = () => {
 
 
   //initialisation fonction flché de deconnexion
-  const logout = () => { 
+  const logout = async() => { 
 
-    signOut(auth);
+    await signOut(auth);
     console.log('logout');
    }
 
